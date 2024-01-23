@@ -1,0 +1,3 @@
+namespace myLib {
+    void myFunc();
+};
