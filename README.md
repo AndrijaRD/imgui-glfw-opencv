@@ -17,3 +17,34 @@ In the Makefile few addition libraries are also linked:
  - glew
 
 (They are aslo included in main.cpp file)
+
+# Instalation
+
+### Opencv
+1. Download the opencv-xxx.zip from opencv.org
+2. Extract it and cd into it
+3. make new folder and cd into it `mk build; cd build`
+4. run `cmake -D OPENCV_GENERATE_PKGCONFIG=ON ..`
+5. run `make -j$(nproc)`
+6. run `sudo make install`
+7. run `sudo cp -r /usr/local/include/opencv4/opencv2 /usr/local/include/`
+8. run `sudo cp -r unix-install/opencv4.pc /usr/local/lib/pkgconfig`
+9. run `export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig` 
+(in the same windows as in you are going to run make)
+10. run `sudo ldconfig`
+11. run `export LD_LIBRARY_PATH=/usr/local/lib`
+
+### GL (Arch Linux)
+1. install it using aur packet manager
+    `yay -S glew`
+
+### MYSQL (arch)
+1. Download the zip from official website
+2. extarct the zip and cd into it
+3. run `sudo cp -r ./include/jdbc /usr/local/include`
+4. run `sudo mv /usr/local/incude/jdbc/cppconn  /usr/local/include`
+5. run `sudo cp -r ./lib64/* /usr/local/lib`
+
+
+# Running
+Just run `make` and it will build the executable.

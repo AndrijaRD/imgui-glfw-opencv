@@ -7,8 +7,8 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <cstdlib>
-#include <mysql_driver.h>
-#include <mysql_connection.h>
+#include <jdbc/mysql_driver.h>
+#include <jdbc/mysql_connection.h>
 #include <cppconn/resultset.h>
 #include <cppconn/statement.h>
 #include <fstream>
@@ -23,7 +23,7 @@ int main(int, char**) {
     if (!glfwInit()) return 1;
     const char* glsl_version = "#version 130";
 
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "projectData", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(1280, 720, "projectName", nullptr, nullptr);
     if (window == nullptr) return 1;
     glfwMakeContextCurrent(window);
 
